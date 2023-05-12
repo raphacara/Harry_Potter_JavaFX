@@ -129,7 +129,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.harry_potter_javafx/com.example.harry_potter_javafx.HelloApplication
+                                com.example.harry_potter_javafx/com.example.HPFX.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

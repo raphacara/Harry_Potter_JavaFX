@@ -10,7 +10,8 @@ module com.example.harry_potter_javafx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires javafx.media;
 
-    opens com.example.harry_potter_javafx to javafx.fxml;
-    exports com.example.harry_potter_javafx;
+    opens com.example.HPFX to javafx.fxml;
+    exports com.example.HPFX;
 }

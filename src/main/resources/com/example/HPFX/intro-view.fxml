@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.HPFX.IntroController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+    </padding>
+
+    <!-- Place the background image (way1.jpg) as an ImageView -->
+    <ImageView>
+        <Image url="/way1.jpg"/>
+    </ImageView>
+
+    <!-- Place the GridPane on top of the background image -->
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+
+        <VBox GridPane.columnSpan="1" GridPane.rowIndex="1" spacing="10"> <!-- VBox -->
+        <!-- Label with text -->
+        <Label fx:id="nextText" GridPane.columnSpan="1" GridPane.rowIndex="10"
+               style="-fx-text-fill: black;
+               -fx-font-family: 'Papyrus';
+               -fx-font-size: 2em;
+               -fx-background-color: rgba(255, 255, 255, 0.3);
+               -fx-background-radius: 10px;
+               -fx-border-color: #000000;
+               -fx-border-width: 1px;
+               -fx-border-radius: 10px;">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30" />
+            </padding>
+        </Label>
+        <Button fx:id="nextButton" text="Next" onAction="#onNextButtonClick" GridPane.columnIndex="10" GridPane.rowIndex="10"
+                style="-fx-text-fill: black;
+                -fx-font-family: 'Papyrus';
+                -fx-font-size: 2em;
+                -fx-background-color: rgba(255, 255, 255, 0.3);
+                -fx-background-radius: 10px;
+                -fx-border-color: #000000;
+                -fx-border-width: 1px;
+                -fx-border-radius: 10px;">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30" />
+            </padding>
+        </Button>
+        <!-- New Label for the player -->
+        <Label fx:id="nameLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="2"
+               style="-fx-text-fill: black;
+       -fx-font-family: 'Papyrus';
+       -fx-font-size: 2em;
+       -fx-background-color: rgba(255, 255, 255, 0.3);
+       -fx-background-radius: 10px;
+       -fx-border-color: #000000;
+       -fx-border-width: 1px;
+       -fx-border-radius: 10px;">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30" />
+            </padding>
+        </Label>
+        <!-- Text to fill the name of the player -->
+        <TextField fx:id="nameTextField" onKeyPressed="#onNameTextFieldAction" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   style="-fx-font-size: 2em;">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30" />
+            </padding>
+        </TextField>
+        </VBox>
+    </GridPane>
+
+    <!-- Add a TextArea for the letter content -->
+    <VBox fx:id="box" spacing="10">
+        <TextArea fx:id="letterTextArea" GridPane.columnSpan="2" GridPane.rowIndex="3" editable="false"
+                  style="-fx-font-family: 'Papyrus'; -fx-font-size: 2em; -fx-background-color: rgba(255, 255, 255, 0.3);
+                         -fx-background-radius: 10px; -fx-border-color: #000000; -fx-border-width: 1px;
+                         -fx-border-radius: 10px;">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30" />
+            </padding>
+        </TextArea>
+        <Button fx:id="continueButton" text="Continue" onAction="#onContinueButtonClick"
+                style="-fx-text-fill: black; -fx-font-family: 'Papyrus'; -fx-font-size: 2em;
+                   -fx-background-color: rgba(255, 255, 255, 0.3); -fx-background-radius: 10px;
+                   -fx-border-color: #000000; -fx-border-width: 1px; -fx-border-radius: 10px;">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30" />
+            </padding>
+        </Button>
+    </VBox>
+</StackPane>
