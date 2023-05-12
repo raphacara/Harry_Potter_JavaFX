@@ -33,7 +33,7 @@ public class IntroController {
 
     private String[] generateTexts2() {
         return new String[] {
-                "HAGRID  -  OH! So you are " + playerName + " ! Sorry, I didn't introduce myself, I am Hagrid.",
+                "HAGRID  -  So you are " + playerName + " ! Sorry, I didn't introduce myself, I am Hagrid.",
                 "HAGRID  -  I was looking for you, and I have a letter for you :"
         };
     }
@@ -76,6 +76,9 @@ public class IntroController {
                 String letterContent = "Dear " + playerName + ",\n\n"
                         + "We are happy to inform you that you have been accepted at the Hogwarts Witchcraft School.\n"
                         + "You are therefore invited to join our community of wizards and witches for an unforgettable school year.\n\n"
+                        + "Please find enclosed a list of all the necessary books and equipment.\n"
+                        + "You will join the school in the middle of the year,\n"
+                        + "So your House, Pet and Wand will magically be assigned to you upon your arrival.\n\n"
                         + "Sincerely,\n"
                         + "Albus Dumbledore, Headmaster of Hogwarts";
                 letterTextArea.setText(letterContent);
@@ -101,6 +104,7 @@ public class IntroController {
         System.out.println("Player name: " + playerName);
         texts = generateTexts2();
         textIndex = 0;
+        nextText.setText("Oh!");
         nextButton.setVisible(true); // Masque le bouton "Next"
         nextText.setVisible(true); // Masque le texte précédent
         // Vérifie si le joueur a saisi un nom
@@ -112,7 +116,6 @@ public class IntroController {
     public void initialize() {
         nameLabel.setVisible(false); // Masque le label pour le message du joueur au début
         nameTextField.setVisible(false); // Masque le champ de texte pour le nom du joueur au début
-        letterTextArea.setEditable(false); // Empêche l'utilisateur de modifier le contenu de la lettre
         box.setVisible(false); // Masque le texte précédent
     }
 
@@ -121,7 +124,7 @@ public class IntroController {
     }
 
     public void animateLabelText() {
-        final int duration = 20; // Durée de l'animation en millisecondes
+        final int duration = 10; // Durée de l'animation en millisecondes
         final StringProperty labelTextProperty = nextText.textProperty();
         nextText.setText(""); // Définit le texte initial comme une chaîne vide
         String currentText = texts[textIndex]; // Récupère le texte actuel à partir du tableau

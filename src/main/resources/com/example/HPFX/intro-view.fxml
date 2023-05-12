@@ -17,9 +17,9 @@
         <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
     </padding>
 
-    <!-- Place the background image (way1.jpg) as an ImageView -->
-    <ImageView>
-        <Image url="/way1.jpg"/>
+    <!-- Place the background image (train.jpeg) as an ImageView -->
+    <ImageView fitWidth="1920" fitHeight="1080">
+        <Image url="/train.jpeg"/>
     </ImageView>
 
     <!-- Place the GridPane on top of the background image -->
@@ -39,7 +39,7 @@
                style="-fx-text-fill: black;
                -fx-font-family: 'Papyrus';
                -fx-font-size: 2em;
-               -fx-background-color: rgba(255, 255, 255, 0.3);
+               -fx-background-color: rgba(255, 255, 255, 0.4);
                -fx-background-radius: 10px;
                -fx-border-color: #000000;
                -fx-border-width: 1px;
@@ -52,7 +52,7 @@
                 style="-fx-text-fill: black;
                 -fx-font-family: 'Papyrus';
                 -fx-font-size: 2em;
-                -fx-background-color: rgba(255, 255, 255, 0.3);
+                -fx-background-color: rgba(255, 255, 255, 0.4);
                 -fx-background-radius: 10px;
                 -fx-border-color: #000000;
                 -fx-border-width: 1px;
@@ -66,7 +66,7 @@
                style="-fx-text-fill: black;
        -fx-font-family: 'Papyrus';
        -fx-font-size: 2em;
-       -fx-background-color: rgba(255, 255, 255, 0.3);
+       -fx-background-color: rgba(255, 255, 255, 0.4);
        -fx-background-radius: 10px;
        -fx-border-color: #000000;
        -fx-border-width: 1px;
@@ -75,7 +75,7 @@
                 <Insets top="10" right="30" bottom="10" left="30" />
             </padding>
         </Label>
-        <!-- Text to fill the name of the player -->
+        <!-- Text to fill with the name of the player -->
         <TextField fx:id="nameTextField" onKeyPressed="#onNameTextFieldAction" GridPane.columnIndex="1" GridPane.rowIndex="2"
                    style="-fx-font-size: 2em;">
             <padding>
@@ -85,20 +85,20 @@
         </VBox>
     </GridPane>
 
-    <!-- Add a TextArea for the letter content -->
-    <VBox fx:id="box" spacing="10">
-        <TextArea fx:id="letterTextArea" GridPane.columnSpan="2" GridPane.rowIndex="3" editable="false"
-                  style="-fx-font-family: 'Papyrus'; -fx-font-size: 2em; -fx-background-color: rgba(255, 255, 255, 0.3);
-                         -fx-background-radius: 10px; -fx-border-color: #000000; -fx-border-width: 1px;
-                         -fx-border-radius: 10px;">
+    <!-- VBox for the letter content -->
+    <VBox fx:id="box" alignment="TOP_CENTER" spacing="10" VBox.vgrow="ALWAYS">
+        <TextArea fx:id="letterTextArea" GridPane.columnSpan="2" GridPane.rowIndex="4" editable="false"
+                  style="-fx-font-family: 'Papyrus'; -fx-font-size: 2em; -fx-background-color: rgba(230, 220, 180, 0.8);
+                     -fx-background-radius: 10px; -fx-border-color: #000000; -fx-border-width: 1px -fx.height: 100em
+                     -fx-border-radius: 10px;">
             <padding>
                 <Insets top="10" right="30" bottom="10" left="30" />
             </padding>
         </TextArea>
         <Button fx:id="continueButton" text="Continue" onAction="#onContinueButtonClick"
                 style="-fx-text-fill: black; -fx-font-family: 'Papyrus'; -fx-font-size: 2em;
-                   -fx-background-color: rgba(255, 255, 255, 0.3); -fx-background-radius: 10px;
-                   -fx-border-color: #000000; -fx-border-width: 1px; -fx-border-radius: 10px;">
+               -fx-background-color: rgba(255, 255, 255, 0.4); -fx-background-radius: 10px;
+               -fx-border-color: #000000; -fx-border-width: 1px; -fx-border-radius: 10px;">
             <padding>
                 <Insets top="10" right="30" bottom="10" left="30" />
             </padding>

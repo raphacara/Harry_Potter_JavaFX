@@ -15,7 +15,7 @@
     </padding>
 
     <!-- Place the background image (HarryPotter.jpg) as an ImageView -->
-    <ImageView>
+    <ImageView fitWidth="1920" fitHeight="1080">
         <Image url="/HarryPotter.jpg"/>
     </ImageView>
 
@@ -31,7 +31,7 @@
             -fx-border-width: 3px;
             -fx-border-radius: 40px;" >
             <padding>
-                <Insets top="0" right="50" bottom="0" left="50" />
+                <Insets right="50" left="50" />
             </padding>
         </Button>
     </VBox>
