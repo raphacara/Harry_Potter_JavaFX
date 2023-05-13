@@ -28,12 +28,12 @@ public class IntroController {
     private String[] texts = {
             "Welcome in the Wizarding World, a world full of magic, hidden away for those who do not know magic, muggles.",
             "And you were a muggle, until today. Because today your door got kicked in by a half-giant.",
-            "HAGRID - Hey, you! What's your name ?",
+            "??? - Hey, you! What's your name ?",
     };
 
     private String[] generateTexts2() {
         return new String[] {
-                "HAGRID  -  So you are " + playerName + " ! Sorry, I didn't introduce myself, I am Hagrid.",
+                "???  -  So you are " + playerName + " ! Sorry, I didn't introduce myself, I am Hagrid.",
                 "HAGRID  -  I was looking for you, and I have a letter for you :"
         };
     }
@@ -109,7 +109,7 @@ public class IntroController {
         nextText.setVisible(true); // Masque le texte précédent
         // Vérifie si le joueur a saisi un nom
         if (playerName.isEmpty()) {
-            playerName = "dumb";
+            playerName = "Wizard";
         }
     }
 
@@ -160,5 +160,4 @@ public class IntroController {
         stage.setFullScreen(wasFullScreen); // Restore the full screen mode
         stage.show();
     }
-
 }

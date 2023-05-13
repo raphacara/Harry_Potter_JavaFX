@@ -19,27 +19,46 @@
         <Image url="/baniere.jpeg"/>
     </ImageView>
 
-    <VBox spacing="10" padding="10">
-        <Label text="YOU" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
-    <VBox spacing="10">
-        <HBox spacing="10" alignment="CENTER_LEFT">
-            <ImageView>
-                <Image url="/wand.jpeg"/>
-            </ImageView>
-            <Label text="Your Wand"/>
+    <VBox spacing="120" style="-fx-font-family: 'Papyrus';" translateX="-260">
+        <HBox spacing="10" alignment="CENTER">
+            <VBox style="-fx-alignment: CENTER;">
+                <padding>
+                    <Insets top="10" right="500" bottom="10" left="500" />
+                </padding>
+                <StackPane style="-fx-background-color: white; -fx-padding: 20px; -fx-background-radius: 2; -fx-border-radius: 2; -fx-border-color: #FFD700; -fx-border-width: 4px;">
+                    <Label text="YOU" style="-fx-font-size: 3em; -fx-font-weight: bold;" />
+                </StackPane>
+            </VBox>
         </HBox>
-        <HBox spacing="10" alignment="CENTER_LEFT">
-            <ImageView>
-                <Image url="/ravenclaw.jpeg"/>
-            </ImageView>
-            <Label text="Your House"/>
-        </HBox>
-        <HBox spacing="10" alignment="CENTER_LEFT">
-            <ImageView>
-                <Image url="/owl.jpeg"/>
-            </ImageView>
-            <Label text="Your Pet"/>
+
+        <HBox spacing="20" alignment="CENTER">
+            <VBox spacing="20" alignment="CENTER">
+                <Label text="Your Wand" style="-fx-background-color: rgba(255, 255, 255, 0.6); -fx-padding: 4px; -fx-background-radius: 10; -fx-font-size: 150%; -fx-alignment: center;"/>
+                <StackPane style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
+                    <ImageView fitWidth="200" fitHeight="200">
+                        <Image url="/wand.jpeg"/>
+                    </ImageView>
+                </StackPane>
+                <Label text="Dragon Core (31cm)" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
+            </VBox>
+            <VBox spacing="20" alignment="CENTER">
+                <Label text="Your House" style="-fx-background-color: rgba(255, 255, 255, 0.6); -fx-padding: 4px; -fx-background-radius: 10; -fx-font-size: 150%; -fx-alignment: center;"/>
+                <StackPane style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
+                    <ImageView fitWidth="200" fitHeight="200">
+                        <Image url="/ravenclaw.jpeg"/>
+                    </ImageView>
+                </StackPane>
+                <Label text="Ravenclaw" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
+            </VBox>
+            <VBox spacing="20" alignment="CENTER">
+                <Label text="Your Pet" style="-fx-background-color: rgba(255, 255, 255, 0.6); -fx-padding: 4px; -fx-background-radius: 10; -fx-font-size: 150%; -fx-alignment: center;"/>
+                <StackPane style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
+                    <ImageView fitWidth="200" fitHeight="200">
+                        <Image url="/owl.jpeg"/>
+                    </ImageView>
+                </StackPane>
+                <Label text="Owl" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
+            </VBox>
         </HBox>
     </VBox>
-</VBox>
 </StackPane>
