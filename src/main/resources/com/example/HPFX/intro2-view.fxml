@@ -9,7 +9,7 @@
 
 <?import javafx.scene.layout.HBox?>
 <StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.example.HPFX.HelloController">
+           fx:controller="com.example.HPFX.Intro2Controller">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
@@ -34,30 +34,30 @@
         <HBox spacing="20" alignment="CENTER">
             <VBox spacing="20" alignment="CENTER">
                 <Label text="Your Wand" style="-fx-background-color: rgba(255, 255, 255, 0.6); -fx-padding: 4px; -fx-background-radius: 10; -fx-font-size: 150%; -fx-alignment: center;"/>
-                <StackPane style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
-                    <ImageView fitWidth="200" fitHeight="200">
-                        <Image url="/wand.jpeg"/>
+                <StackPane fx:id="wandPane" style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
+                    <ImageView fx:id="wandImage" fitWidth="200" fitHeight="200">
+                        <Image url="/clickhere.jpeg"/>
                     </ImageView>
                 </StackPane>
-                <Label text="Dragon Core (31cm)" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
+                <Label fx:id="wandLabel" text="Click on the image!" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
             </VBox>
             <VBox spacing="20" alignment="CENTER">
                 <Label text="Your House" style="-fx-background-color: rgba(255, 255, 255, 0.6); -fx-padding: 4px; -fx-background-radius: 10; -fx-font-size: 150%; -fx-alignment: center;"/>
-                <StackPane style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
-                    <ImageView fitWidth="200" fitHeight="200">
-                        <Image url="/ravenclaw.jpeg"/>
+                <StackPane fx:id="housePane" style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
+                    <ImageView fx:id="houseImage" fitWidth="200" fitHeight="200">
+                        <Image url="/clickhere.jpeg"/>
                     </ImageView>
                 </StackPane>
-                <Label text="Ravenclaw" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
+                <Label fx:id="houseLabel" text="Click on the image!" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
             </VBox>
             <VBox spacing="20" alignment="CENTER">
                 <Label text="Your Pet" style="-fx-background-color: rgba(255, 255, 255, 0.6); -fx-padding: 4px; -fx-background-radius: 10; -fx-font-size: 150%; -fx-alignment: center;"/>
-                <StackPane style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
-                    <ImageView fitWidth="200" fitHeight="200">
-                        <Image url="/owl.jpeg"/>
+                <StackPane fx:id="petPane" style="-fx-background-radius: 10; -fx-border-color: #FFD700; -fx-border-width: 4px; -fx-border-radius: 10;">
+                    <ImageView fx:id="petImage" fitWidth="200" fitHeight="200">
+                        <Image url="/clickhere.jpeg"/>
                     </ImageView>
                 </StackPane>
-                <Label text="Owl" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
+                <Label fx:id="petLabel" text="Click on the image!" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
             </VBox>
         </HBox>
     </VBox>
