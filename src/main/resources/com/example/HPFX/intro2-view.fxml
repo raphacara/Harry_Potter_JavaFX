@@ -8,6 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.example.HPFX.Intro2Controller">
     <padding>
@@ -19,7 +20,7 @@
         <Image url="/baniere.jpeg"/>
     </ImageView>
 
-    <VBox spacing="120" style="-fx-font-family: 'Papyrus';" translateX="-260">
+    <VBox spacing="70" style="-fx-font-family: 'Papyrus';" translateX="-260">
         <HBox spacing="10" alignment="CENTER">
             <VBox style="-fx-alignment: CENTER;">
                 <padding>
@@ -60,5 +61,23 @@
                 <Label fx:id="petLabel" text="Click on the image!" style="-fx-background-color: rgba(255, 249, 230, 1); -fx-padding: 4px; -fx-background-radius: 100; -fx-font-size: 150%; -fx-alignment: center; -fx-min-width: 200px;"/>
             </VBox>
         </HBox>
+
+        <HBox alignment="CENTER">
+            <VBox style="-fx-alignment: CENTER;">
+                <Button text="Continue" onAction="#onContinueButtonClick" style="-fx-text-fill: #ffffff;
+                    -fx-font-family: 'Papyrus';
+                    -fx-font-size: 4em;
+                    -fx-background-color: rgba(0, 0, 0, 0.5);
+                    -fx-background-radius: 40px;
+                    -fx-border-color: white;
+                    -fx-border-width: 3px;
+                    -fx-border-radius: 40px;" >
+                    <padding>
+                        <Insets right="50" left="50" />
+                    </padding>
+                </Button>
+            </VBox>
+        </HBox>
+
     </VBox>
 </StackPane>

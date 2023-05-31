@@ -1,12 +1,17 @@
 package com.example.HPFX;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class Intro2Controller {
@@ -110,5 +115,18 @@ public class Intro2Controller {
         wandLabel.setText(wandCore + " (" + wandLengthText + ")");
 
         wandAssigned = true;
+    }
+
+    public void onContinueButtonClick() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("game1-view.fxml"));
+        StackPane root = fxmlLoader.load();
+        Stage stage = (Stage) housePane.getScene().getWindow();
+        boolean wasFullScreen = stage.isFullScreen(); // Save the current state of the full screen mode
+        Scene gameScene = new Scene(root);
+        stage.setScene(gameScene);
+        stage.setTitle("Harry Potter");
+        stage.setFullScreen(wasFullScreen); // Restore the full screen modes
+        System.out.println("test");
+        stage.show();
     }
 }
